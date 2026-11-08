@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pamela Fialho · Desenvolvedora de software</title>
+  <meta name="description" content="Portfólio de Pamela Fialho: desenvolvimento web, mobile, sistemas embarcados e computação científica.">
+  <meta property="og:title" content="Pamela Fialho · Desenvolvedora de software">
+  <meta property="og:description" content="Do firmware ao app: projetos web, mobile, embarcados e científicos.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/58664749?v=4">
+  <meta name="theme-color" content="#f3efe6">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108205908">
+  <script>
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#projetos">Pular para os projetos</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Início">Pamela <em>Fialho</em></a>
+      <nav class="nav-links" aria-label="Seções">
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Stack</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="icon-btn" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-text">
+        <p class="kicker" id="hero-location"></p>
+        <h1 id="hero-name">Pamela Fialho</h1>
+        <p class="role" id="hero-role"></p>
+        <p class="lead" id="hero-headline"></p>
+        <div class="cta">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" id="hero-github" href="https://github.com/PFSLDO" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <svg class="topo" data-topo="7" viewBox="0 0 600 600" aria-hidden="true"></svg>
+        <img id="hero-avatar" class="blob" src="https://avatars.githubusercontent.com/u/58664749?v=4&amp;s=560" alt="Pamela Fialho ao ar livre, ao lado de um foguete da equipe Apex Rocketry" width="420" height="420">
+      </figure>
+    </section>
+
+    <section class="wrap stats" id="stats" aria-label="Números"></section>
+
+    <!-- SOBRE -->
+    <section class="wrap section" id="sobre">
+      <svg class="topo topo-about" data-topo="11" viewBox="0 0 600 600" aria-hidden="true"></svg>
+      <p class="kicker">quem sou</p>
+      <h2 class="section-title">Sobre</h2>
+      <div class="about-text" id="about-text"></div>
+      <div class="tree" id="tree" aria-label="Frentes de atuação"></div>
+    </section>
+
+    <!-- STACK -->
+    <section class="wrap section" id="stack">
+      <p class="kicker">ferramentas</p>
+      <h2 class="section-title">Stack</h2>
+      <div class="compass-block" id="compass"></div>
+      <div class="stack-grid" id="stack-grid"></div>
+      <div class="lang-panels">
+        <div class="panel">
+          <h3>Linguagens por projeto</h3>
+          <p class="muted small">Em quantos projetos do portfólio cada linguagem aparece (inclui repositórios privados).</p>
+          <div class="bars" id="lang-projects"></div>
+        </div>
+        <div class="panel">
+          <h3 id="lang-bytes-title">Linguagens no GitHub</h3>
+          <p class="muted small" id="lang-bytes-desc"></p>
+          <div class="stackbar" id="lang-bytes-bar" role="img"></div>
+          <ul class="legend" id="lang-bytes-legend"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="wrap section" id="projetos">
+      <p class="kicker">trabalhos</p>
+      <h2 class="section-title">Projetos</h2>
+      <div class="featured" id="featured"></div>
+      <div class="filters" role="toolbar" aria-label="Filtrar projetos" id="filters"></div>
+      <div class="grid" id="project-grid"></div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="wrap section contact" id="contato">
+      <svg class="topo topo-contact" data-topo="3" viewBox="0 0 600 600" aria-hidden="true"></svg>
+      <p class="kicker">vamos conversar</p>
+      <h2 class="section-title">Contato</h2>
+      <p class="lead">Aberta a oportunidades e colaborações. Vamos conversar?</p>
+      <div class="cta" id="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted small">
+    <span>© <span id="year"></span> Pamela Fialho</span>
+    <span>Feito com HTML, CSS e JavaScript · hospedado no GitHub Pages</span>
+  </footer>
+
+  <dialog id="project-dialog" aria-labelledby="dlg-title">
+    <div class="dlg">
+      <button class="icon-btn dlg-close" id="dlg-close" aria-label="Fechar">✕</button>
+      <div id="dlg-body"></div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js?v=20261108205908" type="module"></script>
+</body>
+</html>

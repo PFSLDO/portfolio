@@ -1,0 +1,51 @@
+name: Deploy no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * *" # todo dia às 03:00 (Brasília): atualiza perfil e linguagens
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Atualizar dados do GitHub
+        run: node scripts/fetch-github.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: PFSLDO
+
+      - name: Montar site
+        run: |
+          mkdir _site
+          cp -r index.html assets data _site/
+          touch _site/.nojekyll
+          # versão nos arquivos = commit, para o navegador nunca usar CSS/JS antigos
+          sed -i -E "s/(style\.css|main\.js)\?v=[0-9a-z]*/\1?v=${GITHUB_SHA::7}/g" _site/index.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

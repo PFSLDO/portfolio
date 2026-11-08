@@ -1,0 +1,1114 @@
+[
+  {
+    "slug": "scoliwatch",
+    "title": "ScoliWatch",
+    "tagline": "App + hardware que monitora o aperto de coletes de escoliose",
+    "year": "2025–2026",
+    "category": [
+      "mobile",
+      "embedded"
+    ],
+    "status": "Em testes com paciente real",
+    "featured": true,
+    "summary": "Sistema completo de hardware e software: uma placa ESP32-H2 presa ao colete lê extensômetros e envia as leituras por Bluetooth Low Energy a um app mobile. O paciente vê o percentual de aperto em tempo real e o profissional de saúde acompanha o histórico.",
+    "details": [
+      "O colete de escoliose só funciona se estiver apertado do jeito certo e pelo tempo certo, mas não existia uma forma objetiva de medir isso. O ScoliWatch transforma o aperto em um número: dois extensômetros lidos por um HX711 medem a tensão nas tiras, e o firmware calcula o percentual em relação a uma calibração feita pelo próprio paciente.",
+      "O firmware acorda periodicamente do light sleep, mede, tenta entregar a leitura por BLE e, se o celular não estiver por perto, guarda o dado num buffer circular na EEPROM para sincronizar depois. No app, um serviço em background mantém a conexão, grava o histórico no Firestore, gera gráficos exportáveis (CSV e imagem) e dispara notificações quando o aperto fica abaixo do ideal."
+    ],
+    "highlights": [
+      "Protocolo BLE próprio (GATT + JSON) com comandos de tara, calibração e streaming",
+      "Firmware de baixo consumo com buffer offline em EEPROM e monitoramento de bateria LiFePO4",
+      "Dois perfis de usuário (paciente e profissional) com regras de segurança no Firestore",
+      "Documentação técnica completa e roteiro de testes com usuário real"
+    ],
+    "stack": [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase Auth",
+      "Firestore",
+      "BLE (react-native-ble-plx)",
+      "ESP32-H2",
+      "NimBLE",
+      "HX711",
+      "Arduino C++",
+      "EAS Build"
+    ],
+    "languages": [
+      "TypeScript",
+      "C++"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/scoliwatch-icon.png",
+        "caption": "Ícone do app ScoliWatch",
+        "contain": true
+      }
+    ],
+    "diagram": {
+      "title": "Do colete ao profissional de saúde",
+      "steps": [
+        {
+          "t": "Extensômetros",
+          "s": "tensão nas tiras"
+        },
+        {
+          "t": "ESP32-H2",
+          "s": "HX711 · EEPROM · sleep"
+        },
+        {
+          "t": "App ScoliWatch",
+          "s": "Expo · BLE em background"
+        },
+        {
+          "t": "Firestore",
+          "s": "histórico + regras"
+        },
+        {
+          "t": "Profissional",
+          "s": "gráficos e alertas"
+        }
+      ],
+      "edges": [
+        "analógico",
+        "BLE GATT · JSON",
+        "HTTPS",
+        "acesso vinculado"
+      ]
+    }
+  },
+  {
+    "slug": "floripa-hoje",
+    "title": "Floripa Hoje",
+    "tagline": "O que fazer hoje na Grande Florianópolis, de acordo com o clima e o mar",
+    "year": "2026",
+    "category": [
+      "web"
+    ],
+    "status": "Em desenvolvimento",
+    "featured": true,
+    "summary": "Web app mobile-first que cruza previsão do tempo, condições do mar (maré, ondas, vento) e um catálogo curado de lugares para montar um ranking do que vale a pena fazer hoje em Floripa, explicando o motivo de cada recomendação.",
+    "details": [
+      "As condições são calculadas por setor da ilha (Norte, Leste, Sul, Baías/Continente), porque o mesmo vento sul que estraga uma praia exposta deixa outra perfeita. Praias são avaliadas pela maré e pelas ondas (mar calmo para família, swell bom para surf, maré baixa para piscinas naturais), e o app avisa quando chuva, rajadas ou ondas passam de limites de segurança.",
+      "O projeto foi feito com desenvolvimento orientado a especificação (Spec Kit): cada decisão de produto está registrada na spec antes do código. A arquitetura separa adapters (APIs externas), domínio puro (ranking, setores, tempo) e UI, o que deixa a regra de negócio 100% testável."
+    ],
+    "highlights": [
+      "Arquitetura em camadas: adapters → domínio puro → componentes",
+      "Validação de dados com Zod e checagem do catálogo no build",
+      "Testes unitários (Vitest), E2E (Playwright) e orçamento de performance (Lighthouse CI)",
+      "Spec-driven development com histórico de clarificações"
+    ],
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Zod",
+      "date-fns",
+      "Open-Meteo API",
+      "Vitest",
+      "Playwright",
+      "Lighthouse CI",
+      "Spec Kit"
+    ],
+    "languages": [
+      "TypeScript"
+    ],
+    "links": {},
+    "private": true,
+    "images": [],
+    "diagram": {
+      "title": "Como o ranking é montado",
+      "steps": [
+        {
+          "t": "Open-Meteo",
+          "s": "tempo + mar por setor"
+        },
+        {
+          "t": "Adapters",
+          "s": "HTTP · validação Zod"
+        },
+        {
+          "t": "Domínio",
+          "s": "condições · segurança"
+        },
+        {
+          "t": "Ranking",
+          "s": "catálogo curado"
+        },
+        {
+          "t": "UI mobile",
+          "s": "motivo + melhor horário"
+        }
+      ],
+      "edges": [
+        "JSON",
+        "tipos",
+        "pontuação",
+        "top 10"
+      ]
+    }
+  },
+  {
+    "slug": "apex-rocketry",
+    "title": "Apex Rocketry · Aviônica de foguetes",
+    "tagline": "Presidente da equipe e diretora de eletrônica na equipe de foguetemodelismo da UFSC",
+    "year": "2023",
+    "category": [
+      "embedded",
+      "science"
+    ],
+    "status": "Equipe universitária",
+    "featured": true,
+    "role": "Presidente da equipe · Diretora de eletrônica",
+    "summary": "Liderei a equipe Apex Rocketry da UFSC e a área de eletrônica, responsável pela aviônica: o computador de bordo que registra o voo, detecta o apogeu para acionar a recuperação e transmite telemetria em tempo real para a base.",
+    "details": [
+      "A aviônica combina IMU (MPU/BNO055), barômetro para detectar o apogeu e acionar a recuperação, GPS e rádio LoRa para telemetria e localização do foguete depois do pouso, e um cartão SD que grava todos os dados do voo. Cada subsistema foi validado em bancada antes da integração: protótipos de sinalização por LED, testes de transceptor LoRa, RFID e GPS.",
+      "Também desenvolvemos o banco de teste estático de motores, com célula de carga e HX711 calibrados, display OLED e gravação em SD para medir a curva de empuxo. Depois do voo, um dashboard em Python (Dash + Plotly) processa os dados brutos e mostra altitude, aceleração e trajetória.",
+      "Como presidente, coordenei a equipe multidisciplinar, o programa de trainees e a organização das áreas técnicas."
+    ],
+    "highlights": [
+      "Liderança da equipe e da área de eletrônica",
+      "Detecção de apogeu e acionamento da recuperação pelo barômetro",
+      "Telemetria LoRa + GPS para rastrear o foguete em voo e depois do pouso",
+      "Banco de teste estático com célula de carga para curva de empuxo",
+      "Dashboard pós-voo com Dash e Plotly"
+    ],
+    "stack": [
+      "Arduino / ESP",
+      "C++",
+      "LoRa",
+      "GPS (TinyGPSPlus)",
+      "BNO055 / MPU",
+      "Barômetro BMP",
+      "Cartão SD",
+      "HX711",
+      "OLED",
+      "Python",
+      "Dash",
+      "Plotly",
+      "Pandas"
+    ],
+    "languages": [
+      "C++",
+      "C",
+      "Python"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/apex-equipe-foguete.jpg",
+        "caption": "Equipe Apex Rocketry com o foguete Gravatá"
+      },
+      {
+        "src": "assets/img/projects/apex-equipe-campo.jpg",
+        "caption": "A equipe no campo de lançamento"
+      },
+      {
+        "src": "assets/img/projects/apex-bancada.jpg",
+        "caption": "Trabalho de bancada com as placas de eletrônica"
+      }
+    ],
+    "diagram": {
+      "title": "Aviônica em voo",
+      "steps": [
+        {
+          "t": "Sensores",
+          "s": "IMU · barômetro · GPS"
+        },
+        {
+          "t": "Computador de bordo",
+          "s": "Arduino / ESP"
+        },
+        {
+          "t": "Recuperação",
+          "s": "apogeu → paraquedas"
+        },
+        {
+          "t": "LoRa",
+          "s": "telemetria"
+        },
+        {
+          "t": "Base + dashboard",
+          "s": "Dash · Plotly"
+        }
+      ],
+      "edges": [
+        "I²C · UART",
+        "sinal de apogeu",
+        "dados do voo",
+        "pós-voo"
+      ]
+    },
+    "short": "Apex Rocketry"
+  },
+  {
+    "slug": "optics-locking",
+    "title": "Travamento de sinal em experimentos de óptica",
+    "tagline": "Controle por microcontrolador para manter um experimento óptico travado no pico",
+    "year": "2025–2026",
+    "category": [
+      "embedded",
+      "science"
+    ],
+    "status": "Pesquisa em andamento",
+    "featured": true,
+    "summary": "Sistema de varredura e travamento (lock) para experimentos de óptica usando ESP32 e STM32. Uma estratégia híbrida usa o DAC interno de 8 bits para a varredura rápida e um DAC externo de 12 bits (MCP4725, I²C) para o ajuste fino no travamento.",
+    "details": [
+      "A versão original travava usando só o DAC interno do ESP32. Com 8 bits, perto do pico o valor ideal ficava entre dois níveis e o sistema oscilava. Trocar tudo pelo DAC de 12 bits também não funcionava, porque o I²C é lento demais para a varredura.",
+      "A solução separa o problema em duas fases com requisitos diferentes: varredura (rápida, pouco precisa) e travamento (lento, muito preciso), usando cada DAC onde ele é melhor. Os sinais foram caracterizados em Jupyter e Mathematica, e há também um port para STM32L4 com display LCD."
+    ],
+    "highlights": [
+      "Controle híbrido com dois DACs e deadband para minimizar escritas I²C",
+      "Firmware para ESP32 (Arduino) e STM32L4 (HAL, CubeIDE)",
+      "Caracterização de sinais com Python/Jupyter e Wolfram Mathematica"
+    ],
+    "stack": [
+      "ESP32",
+      "STM32L4",
+      "MCP4725",
+      "I²C",
+      "STM32 HAL",
+      "Arduino",
+      "Jupyter",
+      "Mathematica"
+    ],
+    "languages": [
+      "C",
+      "C++",
+      "Python",
+      "Wolfram Language",
+      "Assembly"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Microcontroller-based_locking_in_optics_experiments"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/optics-placa-lcd.jpg",
+        "caption": "Protótipo de controle na mesa óptica: microcontrolador, DAC e display com amplitude e frequência da varredura"
+      },
+      {
+        "src": "assets/img/projects/optics-laboratorio.jpg",
+        "caption": "Bancada do laboratório de óptica"
+      }
+    ],
+    "diagram": {
+      "title": "Malha de controle",
+      "steps": [
+        {
+          "t": "Fotodetector",
+          "s": "sinal óptico"
+        },
+        {
+          "t": "ADC",
+          "s": "leitura do sinal"
+        },
+        {
+          "t": "Microcontrolador",
+          "s": "scan → lock"
+        },
+        {
+          "t": "DACs",
+          "s": "8 bits rápido · 12 bits fino"
+        },
+        {
+          "t": "Atuador",
+          "s": "posição do experimento"
+        }
+      ],
+      "edges": [
+        "tensão",
+        "amostras",
+        "controle",
+        "tensão"
+      ]
+    },
+    "short": "Travamento óptico"
+  },
+  {
+    "slug": "meu-menu",
+    "title": "Meu Menu",
+    "tagline": "O que dá para comer hoje, respeitando suas comidas seguras e restrições",
+    "year": "2026",
+    "category": [
+      "web"
+    ],
+    "status": "Em desenvolvimento",
+    "featured": false,
+    "summary": "Site para pessoas com restrição alimentar, muitas vezes neurodivergentes, que precisam saber o que podem comer. A pessoa cadastra as comidas seguras, as restrições e o que não tolera, informa os ingredientes que tem em casa e recebe sugestões de refeições que respeitam tudo isso.",
+    "details": [
+      "Para muita gente neurodivergente, ou com seletividade alimentar, decidir o que comer cansa: textura, cheiro e apresentação importam, e uma sugestão genérica de receita não ajuda. O Meu Menu parte das comidas seguras de cada pessoa, ou seja, aquilo que ela sabe que consegue comer, e das suas restrições, para sugerir só o que faz sentido para ela.",
+      "O motor de sugestão remove tudo que tenha ingrediente restrito ou rejeitado, prioriza as comidas seguras e o que já está na despensa, e organiza as opções por refeição. Autenticação e dados ficam no Supabase, e a interface é pensada para ser calma e previsível."
+    ],
+    "highlights": [
+      "Perfil com comidas seguras, restrições e alimentos rejeitados",
+      "Sugestões a partir dos ingredientes que a pessoa tem em casa",
+      "Interface calma e previsível, pensada para neurodivergentes",
+      "Autenticação e banco com Supabase"
+    ],
+    "stack": [
+      "React 19",
+      "Vite",
+      "TypeScript",
+      "Supabase",
+      "ESLint"
+    ],
+    "languages": [
+      "TypeScript",
+      "CSS"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/meumenu-logo.png",
+        "caption": "Logo do Meu Menu",
+        "contain": true
+      }
+    ],
+    "diagram": {
+      "title": "Como a sugestão é montada",
+      "steps": [
+        {
+          "t": "Perfil",
+          "s": "comidas seguras e restrições"
+        },
+        {
+          "t": "Despensa",
+          "s": "o que tem em casa"
+        },
+        {
+          "t": "Filtro",
+          "s": "tira o que não pode"
+        },
+        {
+          "t": "Prioridade",
+          "s": "comidas seguras primeiro"
+        },
+        {
+          "t": "Sugestões",
+          "s": "por refeição"
+        }
+      ],
+      "edges": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  {
+    "slug": "pipe-configurator",
+    "title": "Configurador de tubos industriais",
+    "tagline": "Calculadora interativa e pedido de orçamento para o site de um fabricante de tubos",
+    "year": "2025",
+    "category": [
+      "web"
+    ],
+    "status": "Entregue ao cliente",
+    "featured": false,
+    "client": true,
+    "summary": "Plugin de WordPress feito sob medida para um cliente: um bloco do editor Gutenberg em que o visitante escolhe o material e as medidas do tubo, vê o resultado calculado na hora e envia a configuração como pedido de orçamento.",
+    "details": [
+      "O bloco foi desenvolvido com a Block API do WordPress: a interface do editor em React, o HTML final gerado em PHP e o comportamento no site em JavaScript. A partir do material, diâmetro interno, espessura e comprimento, a calculadora obtém o diâmetro externo e os demais valores da configuração, e um popup integrado ao OptimizePress mostra o resumo e envia o pedido para a equipe comercial.",
+      "Depois da entrega, mantive o plugin funcionando com as atualizações do WordPress: corrigi eventos de input que mudaram com uma atualização, padronizei o visual dos campos e passei a aceitar vírgula e ponto como separador decimal, já que os usuários digitam dos dois jeitos."
+    ],
+    "highlights": [
+      "Bloco Gutenberg próprio (Block API v2)",
+      "Cálculo em tempo real no navegador",
+      "Integração com o popup de orçamento do OptimizePress",
+      "Manutenção depois da entrega: compatibilidade com atualizações e entrada numérica com vírgula ou ponto"
+    ],
+    "stack": [
+      "WordPress",
+      "Gutenberg Block API",
+      "React",
+      "PHP",
+      "JavaScript",
+      "SCSS",
+      "@wordpress/scripts",
+      "OptimizePress"
+    ],
+    "languages": [
+      "PHP",
+      "JavaScript",
+      "CSS"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/pipe-desktop.jpg",
+        "caption": "Configurador no desktop: material, medidas e resultado calculado"
+      },
+      {
+        "src": "assets/img/projects/pipe-mobile.jpg",
+        "caption": "Versão mobile, com ajuste do tubo arrastando as bordas",
+        "contain": true
+      }
+    ],
+    "diagram": {
+      "title": "Do configurador ao orçamento",
+      "steps": [
+        {
+          "t": "Visitante",
+          "s": "material e medidas"
+        },
+        {
+          "t": "Bloco Gutenberg",
+          "s": "React · PHP"
+        },
+        {
+          "t": "Cálculo",
+          "s": "diâmetro externo e demais valores"
+        },
+        {
+          "t": "Popup de orçamento",
+          "s": "OptimizePress"
+        },
+        {
+          "t": "Equipe comercial",
+          "s": "recebe o pedido"
+        }
+      ],
+      "edges": [
+        "formulário",
+        "view.js",
+        "resumo",
+        "envio"
+      ]
+    },
+    "short": "Configurador de tubos"
+  },
+  {
+    "slug": "stock-quote-alert",
+    "title": "Alerta de cotações da B3",
+    "tagline": "Aplicação de console que monitora um ativo e avisa por e-mail quando é hora de comprar ou vender",
+    "year": "2026",
+    "category": [
+      "backend"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Aplicação de console em C# que acompanha continuamente a cotação de um ativo da B3 e envia um e-mail aconselhando a venda quando o preço passa do limite superior, ou a compra quando cai abaixo do inferior.",
+    "details": [
+      "O ativo e os dois preços de referência são passados por linha de comando, e as configurações de SMTP, destinatário e intervalo de consulta ficam num appsettings.json. O código é dividido em serviços com interfaces (cotação, e-mail e aplicação), o que permite trocar a API de cotação ou o provedor de e-mail sem mexer na regra de negócio.",
+      "Para não lotar a caixa de entrada, um alerta só é reenviado quando o preço sai da faixa e volta a cruzá-la. O console, feito com Spectre.Console, mostra as últimas leituras e o histórico de eventos de compra e venda."
+    ],
+    "highlights": [
+      "Arquitetura em serviços com injeção por interface",
+      "Evita alertas repetidos enquanto o preço continua fora da faixa",
+      "Configuração externa (SMTP, intervalo) via Microsoft.Extensions.Configuration"
+    ],
+    "stack": [
+      "C#",
+      ".NET 10",
+      "Brapi API",
+      "MailKit",
+      "SMTP",
+      "Spectre.Console",
+      "Microsoft.Extensions.Configuration"
+    ],
+    "languages": [
+      "C#"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/b3-ilustrativa.jpg",
+        "caption": "Imagem ilustrativa de cotações",
+        "illustrative": true
+      }
+    ],
+    "diagram": {
+      "title": "Ciclo de monitoramento",
+      "steps": [
+        {
+          "t": "CLI",
+          "s": "PETR4 22.67 22.59"
+        },
+        {
+          "t": "Cotação",
+          "s": "API Brapi"
+        },
+        {
+          "t": "Regra",
+          "s": "acima / abaixo da faixa"
+        },
+        {
+          "t": "E-mail",
+          "s": "MailKit · SMTP"
+        },
+        {
+          "t": "Caixa de entrada",
+          "s": "comprar ou vender"
+        }
+      ],
+      "edges": [
+        "parâmetros",
+        "preço",
+        "alerta",
+        "e-mail"
+      ]
+    },
+    "short": "Alerta B3"
+  },
+  {
+    "slug": "pasta-nuclear",
+    "title": "Fase pasta em estrelas de nêutrons",
+    "tagline": "Pesquisa em física nuclear: simulação numérica em Fortran com campo magnético",
+    "year": "2024–2025",
+    "category": [
+      "science"
+    ],
+    "status": "Pesquisa em andamento",
+    "featured": false,
+    "role": "Refatoração e extensão do código de pesquisa",
+    "summary": "Simulação da \"fase pasta\" na crosta de estrelas de nêutrons, região em que a matéria nuclear forma estruturas em 1D, 2D e 3D (placas, bastões e gotas). Refatorei o código de pesquisa para Fortran moderno e estou adicionando o efeito do campo magnético.",
+    "details": [
+      "O código usa a aproximação de Thomas-Fermi com modelos relativísticos de campo médio (Walecka não linear e acoplamentos dependentes da densidade, como NL3, DDH-δ e Typel-Wolter), expande os campos mesônicos numa base de oscilador e integra por quadratura de Gauss.",
+      "O código original é do Prof. Sidney Avancini (UFSC). Meu trabalho foi migrá-lo para Fortran 90, organizar variáveis, globais e lógica, e estendê-lo para incluir o campo magnético intenso dessas estrelas."
+    ],
+    "highlights": [
+      "Modelos relativísticos de campo médio (NL3, DDH-δ, TW)",
+      "Geometrias em 1D, 2D e 3D com quadratura de Gauss",
+      "Migração de código legado para Fortran 90"
+    ],
+    "stack": [
+      "Fortran 90",
+      "Fortran 77",
+      "Métodos numéricos",
+      "Quadratura de Gauss",
+      "Física nuclear"
+    ],
+    "languages": [
+      "Fortran"
+    ],
+    "links": {},
+    "private": true,
+    "images": [
+      {
+        "src": "assets/img/projects/pasta-fases-ilustrativa.jpg",
+        "caption": "Imagem ilustrativa: as fases da pasta nuclear (gnocchi, spaghetti, waffles, lasagna, antispaghetti e antignocchi), de simulações da literatura",
+        "illustrative": true,
+        "contain": true
+      }
+    ],
+    "diagram": {
+      "title": "Estrutura do cálculo",
+      "steps": [
+        {
+          "t": "Parametrização",
+          "s": "NL3 · DDH-δ · TW"
+        },
+        {
+          "t": "Campos mesônicos",
+          "s": "base de oscilador"
+        },
+        {
+          "t": "Thomas-Fermi",
+          "s": "densidades"
+        },
+        {
+          "t": "Geometria",
+          "s": "1D · 2D · 3D"
+        },
+        {
+          "t": "Energia",
+          "s": "fase mais estável"
+        }
+      ],
+      "edges": [
+        "acoplamentos",
+        "autoconsistência",
+        "Gauss",
+        "+ campo B"
+      ]
+    },
+    "short": "Fase pasta"
+  },
+  {
+    "slug": "art-site",
+    "title": "Site Pamela Fialho Art",
+    "tagline": "Site institucional e portfólio de um estúdio de tatuagem",
+    "year": "2020–2025",
+    "category": [
+      "web"
+    ],
+    "status": "No ar",
+    "featured": false,
+    "summary": "Site responsivo para a marca Pamela Fialho Art, com galeria de trabalhos, apresentação e contato. Feito do zero com HTML, CSS e JavaScript, publicado com domínio próprio no GitHub Pages.",
+    "details": [
+      "Layout responsivo com media queries próprias, favicons para todas as plataformas e otimização de imagens para a galeria."
+    ],
+    "highlights": [
+      "Domínio próprio no GitHub Pages",
+      "Responsivo sem frameworks"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages"
+    ],
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Pamela_Fialho_Art_site",
+      "live": "https://art.pamelafialho.com.br/"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/art-DSC_4478.jpg",
+        "caption": "Foto usada no site"
+      },
+      {
+        "src": "assets/img/projects/art-IMG_0952.jpg",
+        "caption": "Foto usada no site"
+      }
+    ],
+    "short": "Site Pamela Fialho Art"
+  },
+  {
+    "slug": "lab-fisica-moderna",
+    "title": "Laboratório de Física Moderna",
+    "tagline": "Análise de dados de experimentos clássicos da física moderna",
+    "year": "2025",
+    "category": [
+      "science"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Análises em Python/Jupyter dos experimentos de Franck-Hertz, efeito fotoelétrico, difração de raios X, absorção de radiação (alumínio e chumbo) e carga elementar (Millikan, com tratamento em C).",
+    "details": [
+      "Cada notebook organiza os dados brutos, faz ajustes de curva com incertezas e gera os gráficos usados nos relatórios."
+    ],
+    "highlights": [
+      "Ajustes de curva e propagação de incertezas",
+      "Tratamento de dados de Millikan em C"
+    ],
+    "stack": [
+      "Python",
+      "Jupyter",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "C"
+    ],
+    "languages": [
+      "Python",
+      "C"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/LaboratorioFisicaModerna"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/lab-grafico_franck_hertz.png",
+        "caption": "Experimento de Franck-Hertz"
+      },
+      {
+        "src": "assets/img/projects/lab-grafico_potencial_vs_frequencia.png",
+        "caption": "Efeito fotoelétrico: potencial de corte × frequência"
+      },
+      {
+        "src": "assets/img/projects/lab-grafico_absorcao_chumbo.png",
+        "caption": "Absorção de radiação no chumbo"
+      },
+      {
+        "src": "assets/img/projects/lab-grafico_distribuicao_angular_intensidade.png",
+        "caption": "Difração de raios X: intensidade × ângulo"
+      },
+      {
+        "src": "assets/img/projects/franck-hertz-ilustrativa.jpg",
+        "caption": "Imagem ilustrativa: montagem do experimento de Franck-Hertz",
+        "illustrative": true,
+        "contain": true
+      }
+    ],
+    "short": "Lab. Física Moderna"
+  },
+  {
+    "slug": "fisica-computacional",
+    "title": "Física Computacional (UFSC)",
+    "tagline": "Métodos numéricos aplicados a problemas físicos",
+    "year": "2023–2024",
+    "category": [
+      "science",
+      "study"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Implementações de métodos numéricos: zeros de funções (bisseção, Newton, ponto fixo), interpolação, integração (Simpson, quadratura de Gauss), EDOs (Euler, Euler-Cromer, RK2, RK4) e um projeto final de processos estocásticos. Inclui a disciplina introdutória, feita inteiramente em C.",
+    "details": [
+      "Na introdutória (C): queda livre, oscilador harmônico amortecido, geração de números aleatórios e algoritmos de ordenação. Na avançada (Python): os métodos acima com análise de erro e convergência."
+    ],
+    "highlights": [
+      "RK4, Euler-Cromer e análise de estabilidade",
+      "Processos estocásticos e Monte Carlo"
+    ],
+    "stack": [
+      "Python",
+      "Jupyter",
+      "NumPy",
+      "Matplotlib",
+      "C"
+    ],
+    "languages": [
+      "Python",
+      "C"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/FisicaComputacional",
+      "repo2": "https://github.com/PFSLDO/IntroFisComp"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/integracao-ilustrativa.jpg",
+        "caption": "Imagem ilustrativa: integração numérica (quadratura de Gauss × trapézio)",
+        "illustrative": true
+      }
+    ],
+    "diagram": {
+      "title": "Do problema físico à solução numérica",
+      "steps": [
+        {
+          "t": "Modelo físico",
+          "s": "EDO / integral"
+        },
+        {
+          "t": "Discretização",
+          "s": "passo h"
+        },
+        {
+          "t": "Método",
+          "s": "Euler · RK4 · Simpson"
+        },
+        {
+          "t": "Erro",
+          "s": "convergência"
+        },
+        {
+          "t": "Visualização",
+          "s": "Matplotlib"
+        }
+      ],
+      "edges": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "short": "Física Computacional"
+  },
+  {
+    "slug": "home-automation",
+    "title": "Automação residencial com HomeSpan",
+    "tagline": "Dispositivos ESP32 integrados ao app Casa da Apple",
+    "year": "2024",
+    "category": [
+      "embedded"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Acessórios de automação residencial com ESP32 e a biblioteca HomeSpan, que implementa o protocolo HomeKit. Os dispositivos aparecem no app Casa do iPhone e podem ser controlados pela Siri.",
+    "details": [],
+    "highlights": [
+      "Protocolo HomeKit (HAP) no ESP32",
+      "Pareamento direto com o app Casa"
+    ],
+    "stack": [
+      "ESP32",
+      "HomeSpan",
+      "HomeKit",
+      "Arduino C++"
+    ],
+    "languages": [
+      "C++",
+      "C"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/HomeAutomation"
+    },
+    "images": [],
+    "diagram": {
+      "title": "Integração",
+      "steps": [
+        {
+          "t": "Sensor / relé",
+          "s": "GPIO"
+        },
+        {
+          "t": "ESP32",
+          "s": "HomeSpan"
+        },
+        {
+          "t": "Wi-Fi",
+          "s": "HAP"
+        },
+        {
+          "t": "App Casa",
+          "s": "iPhone · Siri"
+        }
+      ],
+      "edges": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "short": "HomeSpan"
+  },
+  {
+    "slug": "ifsc-do-milhao",
+    "title": "IFSC do Milhão",
+    "tagline": "Jogo de perguntas e respostas em C com interface gráfica",
+    "year": "2021",
+    "category": [
+      "study"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Jogo no estilo show de perguntas, escrito em C com interface gráfica, sons e personagens. Perguntas, alternativas e dicas são carregadas de arquivos CSV.",
+    "details": [
+      "Projeto da disciplina de programação no IFSC. Gerencia estados de menu, temas, ajudas e pontuação, com áudio e fontes customizadas."
+    ],
+    "highlights": [
+      "Interface gráfica e áudio em C",
+      "Conteúdo dirigido por dados (CSV)"
+    ],
+    "stack": [
+      "C",
+      "Allegro 5",
+      "CSV"
+    ],
+    "languages": [
+      "C"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/ifsc_do_milhao"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/milhao-logo.png",
+        "caption": "Logo do IFSC do Milhão, feito para o jogo",
+        "contain": true
+      }
+    ]
+  },
+  {
+    "slug": "arduino",
+    "title": "Projetos com Arduino",
+    "tagline": "Luminária inteligente, POV com LEDs, jogo da memória e sensores",
+    "year": "2020–2021",
+    "category": [
+      "embedded"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Coleção de projetos de eletrônica: luminária que liga conforme a luz ambiente e troca de cor ao toque, display de persistência de visão com 8 LEDs, projetos com sensores (ultrassônico, infravermelho, LDR, toque, inclinação), servo e relés, e o AQTECH da Oficina 4.0, com teste de Q-learning rodando num Arduino UNO.",
+    "details": [],
+    "highlights": [
+      "Persistência de visão com controle de velocidade por potenciômetro",
+      "Q-learning embarcado em Arduino UNO (Oficina 4.0)"
+    ],
+    "stack": [
+      "Arduino UNO",
+      "C++",
+      "Sensores",
+      "LED RGB",
+      "Relés",
+      "Servo"
+    ],
+    "languages": [
+      "C++"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Luminaria_Inteligente",
+      "extra": [
+        {
+          "label": "POV LEDs",
+          "url": "https://github.com/PFSLDO/Fora_Bozo_Leds"
+        },
+        {
+          "label": "Projetos iniciantes",
+          "url": "https://github.com/PFSLDO/Projetos_Iniciantes_Arduino"
+        },
+        {
+          "label": "Oficina 4.0",
+          "url": "https://github.com/PFSLDO/OFICINA_4.0"
+        }
+      ]
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/arduino-ldr-ilustrativa.png",
+        "caption": "Imagem ilustrativa: circuito com Arduino, LDR e relé",
+        "illustrative": true,
+        "contain": true
+      }
+    ],
+    "diagram": {
+      "title": "Luminária inteligente",
+      "steps": [
+        {
+          "t": "LDR",
+          "s": "luz ambiente"
+        },
+        {
+          "t": "Toque",
+          "s": "TTP223B"
+        },
+        {
+          "t": "Arduino UNO",
+          "s": "lógica"
+        },
+        {
+          "t": "LED RGB",
+          "s": "cor e intensidade"
+        }
+      ],
+      "edges": [
+        "",
+        "",
+        "PWM"
+      ]
+    },
+    "short": "Arduino"
+  },
+  {
+    "slug": "proffy",
+    "title": "Proffy",
+    "tagline": "Plataforma que conecta alunos e professores (Next Level Week #2)",
+    "year": "2020",
+    "category": [
+      "web"
+    ],
+    "status": "Concluído",
+    "featured": false,
+    "summary": "Aplicação web onde professores cadastram aulas e horários e alunos filtram por matéria, dia e hora. Dados persistidos em SQLite.",
+    "details": [],
+    "highlights": [
+      "Formulários dinâmicos e filtros",
+      "Persistência com SQLite"
+    ],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQLite"
+    ],
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Proffy_NLW2"
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/proffy-home.jpg",
+        "caption": "Tela inicial do Proffy"
+      }
+    ]
+  },
+  {
+    "slug": "instagram-filters",
+    "title": "Filtros de Instagram",
+    "tagline": "Filtros interativos de realidade aumentada para os stories",
+    "year": "2020",
+    "category": [
+      "web"
+    ],
+    "status": "Publicado no Instagram",
+    "featured": false,
+    "summary": "Três filtros de AR para a marca Pamela Fialho Art: um quiz que sorteia perguntas sobre tatuagem e dois que aplicam tatuagens e piercings virtuais no rosto, com a lógica escrita em JavaScript.",
+    "details": [],
+    "highlights": [
+      "Scripts de interação e sorteio em JavaScript",
+      "Rastreamento facial"
+    ],
+    "stack": [
+      "Spark AR",
+      "JavaScript"
+    ],
+    "languages": [
+      "JavaScript"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Filtro_Quiz_Tatuagem_Instagram",
+      "live": "https://www.instagram.com/pamelafialho.art/",
+      "extra": [
+        {
+          "label": "Filtro tatuagem",
+          "url": "https://github.com/PFSLDO/Filtro_Tatuagem_Instagram"
+        },
+        {
+          "label": "Filtro piercing",
+          "url": "https://github.com/PFSLDO/Filtro_Piercing_Instagram"
+        }
+      ]
+    },
+    "images": [
+      {
+        "src": "assets/img/projects/instagram-filtro-titulo.png",
+        "caption": "Arte do filtro \"Sua próxima tattoo será\"",
+        "contain": true
+      }
+    ]
+  },
+  {
+    "slug": "estudos",
+    "title": "Estudos e exercícios",
+    "tagline": "C, C++ orientado a objetos e machine learning",
+    "year": "2020–2023",
+    "category": [
+      "study"
+    ],
+    "status": "Contínuo",
+    "featured": false,
+    "summary": "Listas de exercícios de lógica e programação em C, estudos de C++ e orientação a objetos, e primeiros passos em machine learning com Python.",
+    "details": [],
+    "highlights": [],
+    "stack": [
+      "C",
+      "C++",
+      "Python",
+      "Jupyter"
+    ],
+    "languages": [
+      "C",
+      "C++",
+      "Python"
+    ],
+    "links": {
+      "repo": "https://github.com/PFSLDO/Listas_de_Exercicios_Programacao_em_Linguagem_C",
+      "extra": [
+        {
+          "label": "Lógica (LGP)",
+          "url": "https://github.com/PFSLDO/Listas_de_Exercicios_LGP"
+        },
+        {
+          "label": "Estudo C++",
+          "url": "https://github.com/PFSLDO/EstudoCpp"
+        },
+        {
+          "label": "Machine learning",
+          "url": "https://github.com/PFSLDO/machine_learning_study"
+        }
+      ]
+    },
+    "images": []
+  }
+]

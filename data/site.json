@@ -1,0 +1,243 @@
+{
+  "name": "Pamela Fialho",
+  "role": "Desenvolvedora de software",
+  "headline": "Do firmware ao app: construo sistemas completos, unindo eletrônica, física e software.",
+  "about": [
+    "Sou formada em Eletrônica, estudo Física e trabalho como desenvolvedora full stack. Essa mistura é o que define meu trabalho: consigo projetar o hardware, escrever o firmware que roda nele, construir o app que conversa com ele e analisar os dados que saem do outro lado.",
+    "Gosto de problemas reais e com gente do outro lado, como um colete de escoliose que precisa ser apertado do jeito certo ou um experimento de óptica que precisa ficar travado no pico. Trabalho com especificação antes do código, testes automatizados e documentação que outra pessoa consegue seguir."
+  ],
+  "location": "Florianópolis, SC, Brasil",
+  "github": "https://github.com/PFSLDO",
+  "linkedin": "",
+  "email": "pamelafialho2002@hotmail.com",
+  "codingSince": 2019,
+  "stack": [
+    {
+      "group": "Linguagens",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C",
+        "C++",
+        "C#",
+        "PHP",
+        "Java",
+        "Fortran",
+        "HTML",
+        "CSS",
+        "Wolfram Language"
+      ]
+    },
+    {
+      "group": "Front-end & Mobile",
+      "items": [
+        "React",
+        "React Native",
+        "Expo",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "WordPress (Gutenberg)"
+      ]
+    },
+    {
+      "group": "Back-end & Dados",
+      "items": [
+        "Firebase (Auth, Firestore)",
+        "Supabase",
+        ".NET",
+        "SQLite",
+        "REST APIs",
+        "SMTP / MailKit",
+        "Zod"
+      ]
+    },
+    {
+      "group": "Embarcados & Hardware",
+      "items": [
+        "ESP32",
+        "STM32",
+        "Arduino",
+        "BLE / NimBLE",
+        "I²C",
+        "HX711",
+        "HomeKit (HomeSpan)",
+        "LoRa",
+        "GPS / IMU"
+      ]
+    },
+    {
+      "group": "Ciência & Análise",
+      "items": [
+        "Jupyter",
+        "NumPy",
+        "SciPy",
+        "Matplotlib",
+        "Mathematica",
+        "Métodos numéricos",
+        "Dash / Plotly",
+        "Pandas"
+      ]
+    },
+    {
+      "group": "Qualidade & Ferramentas",
+      "items": [
+        "Git & GitHub",
+        "Vitest",
+        "Playwright",
+        "Lighthouse CI",
+        "ESLint",
+        "EAS Build",
+        "Spec-driven dev"
+      ]
+    }
+  ],
+  "whatsapp": "+55 48 99829-5282",
+  "tree": {
+    "root": "Pamela Fialho",
+    "rootSub": "várias frentes, ao mesmo tempo",
+    "branches": [
+      {
+        "name": "Eletrônica",
+        "sub": "formação",
+        "color": "b1",
+        "leaves": [
+          {
+            "title": "Formação em Eletrônica",
+            "text": "Circuitos, microcontroladores e programação em C."
+          },
+          {
+            "title": "Sistemas embarcados",
+            "text": "ESP32, STM32 e Arduino, com BLE, LoRa, I²C e sensores.",
+            "now": true,
+            "projects": [
+              "scoliwatch",
+              "home-automation",
+              "arduino"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Física",
+        "sub": "UFSC",
+        "color": "b2",
+        "leaves": [
+          {
+            "title": "Graduação em Física",
+            "text": "Física computacional, métodos numéricos e laboratório.",
+            "now": true,
+            "projects": [
+              "fisica-computacional",
+              "lab-fisica-moderna"
+            ]
+          },
+          {
+            "title": "Pesquisa em física nuclear",
+            "text": "Fase pasta em estrelas de nêutrons, com simulação numérica em Fortran.",
+            "now": true,
+            "projects": [
+              "pasta-nuclear"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Software",
+        "sub": "full stack",
+        "color": "b3",
+        "leaves": [
+          {
+            "title": "Apps mobile e web",
+            "text": "React, React Native, Next.js e Firebase, muitas vezes ligados a hardware próprio.",
+            "now": true,
+            "projects": [
+              "scoliwatch",
+              "floripa-hoje",
+              "meu-menu"
+            ]
+          },
+          {
+            "title": "Projetos para clientes",
+            "text": "Soluções sob medida, como plugins e sites.",
+            "now": true,
+            "projects": [
+              "pipe-configurator",
+              "art-site"
+            ]
+          },
+          {
+            "title": "Back-end e ferramentas",
+            "text": "Serviços em C#/.NET, integrações e automação.",
+            "projects": [
+              "stock-quote-alert"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Liderança",
+        "sub": "equipes",
+        "color": "b4",
+        "leaves": [
+          {
+            "title": "Apex Rocketry (UFSC)",
+            "text": "Presidente da equipe de foguetemodelismo e diretora de eletrônica, responsável pela aviônica.",
+            "projects": [
+              "apex-rocketry"
+            ]
+          }
+        ]
+      }
+    ],
+    "bridges": [
+      {
+        "between": [
+          0,
+          1
+        ],
+        "leaf": {
+          "title": "Instrumentação científica",
+          "text": "Controle por microcontrolador para manter experimentos de óptica travados no pico: eletrônica e física no mesmo projeto.",
+          "now": true,
+          "projects": [
+            "optics-locking"
+          ]
+        }
+      }
+    ]
+  },
+  "compass": {
+    "kicker": "orientação",
+    "title": "Sei me orientar em território novo",
+    "text": "Stacks mudam e destinos novos aparecem. Quando um projeto pede uma tecnologia que eu ainda não uso, eu leio o mapa, escolho a rota e aprendo no caminho. Alguns destinos que explorei assim:",
+    "destinations": [
+      {
+        "stack": "C# e .NET",
+        "project": "stock-quote-alert",
+        "bearing": 42
+      },
+      {
+        "stack": "Fortran 90",
+        "project": "pasta-nuclear",
+        "bearing": 118
+      },
+      {
+        "stack": "WordPress e Gutenberg",
+        "project": "pipe-configurator",
+        "bearing": 205
+      },
+      {
+        "stack": "BLE na ESP32-H2",
+        "project": "scoliwatch",
+        "bearing": 290
+      },
+      {
+        "stack": "LoRa e telemetria",
+        "project": "apex-rocketry",
+        "bearing": 338
+      }
+    ]
+  }
+}
