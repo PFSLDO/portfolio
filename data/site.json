@@ -3,7 +3,7 @@
   "role": "Desenvolvedora de software",
   "headline": "Do firmware ao app: construo sistemas completos, unindo eletrônica, física e software.",
   "about": [
-    "Sou formada em Eletrônica, estudo Física e trabalho como desenvolvedora full stack. Essa mistura é o que define meu trabalho: consigo projetar o hardware, escrever o firmware que roda nele, construir o app que conversa com ele e analisar os dados que saem do outro lado.",
+    "Sou formada em Eletrônica, estudo Física e trabalho como desenvolvedora de software. Foram quase 5 anos de desenvolvimento full stack em C++ e Qt na AltoQi, levando produto do projeto até o cliente. Essa mistura define meu trabalho: consigo projetar o hardware, escrever o firmware que roda nele, construir o software que conversa com ele e analisar os dados que saem do outro lado.",
     "Gosto de problemas reais e com gente do outro lado, como um colete de escoliose que precisa ser apertado do jeito certo ou um experimento de óptica que precisa ficar travado no pico. Trabalho com especificação antes do código, testes automatizados e documentação que outra pessoa consegue seguir."
   ],
   "location": "Florianópolis, SC, Brasil",
@@ -15,11 +15,11 @@
     {
       "group": "Linguagens",
       "items": [
+        "C++",
         "TypeScript",
         "JavaScript",
         "Python",
         "C",
-        "C++",
         "C#",
         "PHP",
         "Java",
@@ -27,11 +27,15 @@
         "HTML",
         "CSS",
         "Wolfram Language"
+      ],
+      "highlight": [
+        "C++"
       ]
     },
     {
-      "group": "Front-end & Mobile",
+      "group": "Desktop, Front-end & Mobile",
       "items": [
+        "Qt",
         "React",
         "React Native",
         "Expo",
@@ -39,11 +43,15 @@
         "Vite",
         "Tailwind CSS",
         "WordPress (Gutenberg)"
+      ],
+      "highlight": [
+        "Qt"
       ]
     },
     {
-      "group": "Back-end & Dados",
+      "group": "Back-end, Dados & IA",
       "items": [
+        "IA com MCP e skills",
         "Firebase (Auth, Firestore)",
         "Supabase",
         ".NET",
@@ -51,6 +59,9 @@
         "REST APIs",
         "SMTP / MailKit",
         "Zod"
+      ],
+      "highlight": [
+        "IA com MCP e skills"
       ]
     },
     {
@@ -148,6 +159,13 @@
         "color": "b3",
         "leaves": [
           {
+            "title": "Indústria: AltoQi",
+            "text": "Quase 5 anos como desenvolvedora full stack C++/Qt, com IA (MCP e skills) e entrega até o cliente.",
+            "projects": [
+              "altoqi-nodes"
+            ]
+          },
+          {
             "title": "Apps mobile e web",
             "text": "React, React Native, Next.js e Firebase, muitas vezes ligados a hardware próprio.",
             "now": true,
@@ -212,6 +230,11 @@
     "text": "Stacks mudam e destinos novos aparecem. Quando um projeto pede uma tecnologia que eu ainda não uso, eu leio o mapa, escolho a rota e aprendo no caminho. Alguns destinos que explorei assim:",
     "destinations": [
       {
+        "stack": "MCP e skills de IA",
+        "project": "altoqi-nodes",
+        "bearing": 75
+      },
+      {
         "stack": "C# e .NET",
         "project": "stock-quote-alert",
         "bearing": 42
@@ -237,5 +260,22 @@
         "bearing": 338
       }
     ]
-  }
+  },
+  "experience": [
+    {
+      "company": "AltoQi",
+      "about": "Software de engenharia e BIM · Florianópolis",
+      "role": "Desenvolvedora de software full stack C++/Qt",
+      "period": "quase 5 anos",
+      "text": "Desenvolvimento de software em C++ e Qt, ponta a ponta: do projeto até a mão do cliente e o faturamento para a empresa. Trabalhei diretamente no AltoQi Nodes e na implementação de recursos de IA com MCP e skills.",
+      "stack": [
+        "C++",
+        "Qt",
+        "IA",
+        "MCP",
+        "Skills"
+      ],
+      "project": "altoqi-nodes"
+    }
+  ]
 }

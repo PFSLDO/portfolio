@@ -12,7 +12,7 @@ const LANG_COLORS = {
 };
 const color = (l) => LANG_COLORS[l] || "#7d8a6a";
 
-const CATEGORIES = { all: "Todos", web: "Web", mobile: "Mobile", embedded: "Embarcados", backend: "Back-end", science: "Ciência", study: "Estudos" };
+const CATEGORIES = { all: "Todos", web: "Web", mobile: "Mobile", desktop: "Desktop", embedded: "Embarcados", backend: "Back-end", science: "Ciência", study: "Estudos" };
 
 const getJSON = (p) => fetch(p, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 const [site, projects, gh] = await Promise.all([getJSON("data/site.json"), getJSON("data/projects.json"), getJSON("data/github.json")]);
@@ -145,7 +145,23 @@ document.querySelectorAll(".fronts .leaf").forEach((card) => {
   card.addEventListener("mouseleave", () => on(false));
 });
 $("#stack-grid").innerHTML = site.stack
-  .map((g) => `<div class="panel"><h3>${esc(g.group)}</h3><div class="chips">${g.items.map((i) => `<span class="chip">${esc(i)}</span>`).join("")}</div></div>`)
+  .map((g) => `<div class="panel"><h3>${esc(g.group)}</h3><div class="chips">${g.items.map((i) => `<span class="chip${(g.highlight || []).includes(i) ? " chip-strong" : ""}">${esc(i)}</span>`).join("")}</div></div>`)
+  .join("");
+
+/* ---------- Experiência ---------- */
+$("#experience-list").innerHTML = (site.experience || [])
+  .map(
+    (e) => `<article class="job">
+      <div class="job-head">
+        <div><h3>${esc(e.company)}</h3><p class="muted small">${esc(e.about)}</p></div>
+        <span class="job-period">${esc(e.period)}</span>
+      </div>
+      <p class="job-role">${esc(e.role)}</p>
+      <p>${esc(e.text)}</p>
+      <div class="chips">${e.stack.map((t) => `<span class="chip chip-strong">${esc(t)}</span>`).join("")}</div>
+      ${e.project ? `<button class="linkbtn" data-open="${e.project}">Ver o projeto ${esc(projTitle(e.project))} →</button>` : ""}
+    </article>`
+  )
   .join("");
 
 /* ---------- Bússola ---------- */
@@ -258,12 +274,12 @@ const linksHTML = (p) => {
   if (p.links.repo) out.push(`<a href="${p.links.repo}" target="_blank" rel="noopener">Código ↗</a>`);
   if (p.links.repo2) out.push(`<a href="${p.links.repo2}" target="_blank" rel="noopener">Código (parte 2) ↗</a>`);
   (p.links.extra || []).forEach((e) => out.push(`<a href="${e.url}" target="_blank" rel="noopener">${esc(e.label)} ↗</a>`));
-  if (p.private) out.push(`<span class="private-note">🔒 ${p.client ? "Código confidencial do cliente" : "Código em repositório privado"}</span>`);
+  if (p.private) out.push(`<span class="private-note">🔒 ${p.proprietary ? "Código proprietário da empresa" : p.client ? "Código confidencial do cliente" : "Código em repositório privado"}</span>`);
   return out.join("");
 };
 
 const metaHTML = (p) =>
-  `<div class="meta"><span class="badge">${esc(p.year)}</span><span class="badge ${p.links.live ? "live" : ""}">${esc(p.status)}</span>${p.client ? '<span class="badge client">Projeto para cliente</span>' : ""}${p.category
+  `<div class="meta"><span class="badge">${esc(p.year)}</span><span class="badge ${p.links.live ? "live" : ""}">${esc(p.status)}</span>${p.client ? '<span class="badge client">Projeto para cliente</span>' : ""}${p.company ? `<span class="badge client">${esc(p.company)}</span>` : ""}${p.category
     .map((c) => `<span class="badge">${CATEGORIES[c]}</span>`)
     .join("")}</div>`;
 

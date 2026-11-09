@@ -1,5 +1,73 @@
 [
   {
+    "slug": "altoqi-nodes",
+    "title": "AltoQi Nodes",
+    "tagline": "Produto da AltoQi desenvolvido em C++ e Qt, com recursos de IA",
+    "year": "~5 anos",
+    "category": [
+      "desktop"
+    ],
+    "status": "Produto em mercado",
+    "featured": true,
+    "role": "Desenvolvedora de software full stack C++/Qt",
+    "company": "AltoQi",
+    "summary": "Na AltoQi, empresa de software de engenharia e BIM de Florianópolis, trabalhei diretamente no AltoQi Nodes, do projeto até chegar na mão do cliente e gerar faturamento para a empresa, incluindo a implementação de recursos de inteligência artificial com MCP e skills.",
+    "details": [
+      "Foram quase 5 anos de desenvolvimento full stack em C++ e Qt. No Nodes, participei do ciclo completo de produto: entender o que precisava ser construído, implementar, integrar recursos de IA e entregar algo que o cliente usa e paga.",
+      "Na parte de IA, trabalhei com MCP (Model Context Protocol) e skills, para que modelos de linguagem pudessem acessar as funcionalidades do software de forma estruturada."
+    ],
+    "highlights": [
+      "Desenvolvimento full stack em C++ e Qt por quase 5 anos",
+      "Implementação de IA com MCP e skills",
+      "Responsabilidade de ponta a ponta: do projeto ao cliente e ao faturamento"
+    ],
+    "stack": [
+      "C++",
+      "Qt",
+      "IA",
+      "MCP",
+      "Skills"
+    ],
+    "languages": [
+      "C++"
+    ],
+    "links": {},
+    "private": true,
+    "proprietary": true,
+    "images": [],
+    "diagram": {
+      "title": "Do projeto ao cliente",
+      "steps": [
+        {
+          "t": "Projeto",
+          "s": "o que construir"
+        },
+        {
+          "t": "Desenvolvimento",
+          "s": "C++ · Qt"
+        },
+        {
+          "t": "IA",
+          "s": "MCP · skills"
+        },
+        {
+          "t": "Entrega",
+          "s": "na mão do cliente"
+        },
+        {
+          "t": "Resultado",
+          "s": "faturamento"
+        }
+      ],
+      "edges": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  {
     "slug": "scoliwatch",
     "title": "ScoliWatch",
     "tagline": "App + hardware que monitora o aperto de coletes de escoliose",
