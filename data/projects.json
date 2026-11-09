@@ -1,32 +1,34 @@
 [
   {
     "slug": "altoqi-nodes",
-    "title": "AltoQi Nodes",
-    "tagline": "Programação visual por nós para gerar desenho e geometria, feita em C++ e Qt, com recursos de IA",
-    "year": "~5 anos",
+    "title": "AltoQi Axis Nodes",
+    "tagline": "Programação visual por nós integrada ao AltoQi Eberick, feita em C++ e Qt, com recursos de IA",
+    "year": "2022 – 2026",
     "category": [
       "desktop"
     ],
     "status": "Produto em mercado",
     "featured": true,
-    "role": "Desenvolvedora de software full stack C++/Qt",
+    "role": "Software Engineer",
     "company": "AltoQi",
-    "summary": "Na AltoQi, empresa de software de engenharia e BIM de Florianópolis, trabalhei diretamente no AltoQi Nodes, um ambiente de programação visual: em vez de escrever código, o usuário conecta nós (números, pontos, retângulos, níveis de desenho) para gerar desenho e geometria, como a forma de uma viga. Participei do projeto até o produto chegar na mão do cliente e gerar faturamento para a empresa, incluindo a implementação de recursos de inteligência artificial com MCP e skills.",
+    "summary": "Na AltoQi, empresa de software de engenharia e BIM de Florianópolis, trabalhei diretamente no AltoQi Axis Nodes, uma ferramenta de programação visual e automação integrada ao AltoQi Eberick: em vez de escrever código, o engenheiro conecta nós (números, pontos, retângulos, níveis de desenho) para criar fluxos lógicos, cálculos e desenhos ligados ao projeto estrutural, como a forma de uma viga. Participei da construção do produto desde o início do desenvolvimento até a entrega aos clientes.",
     "details": [
-      "Foram quase 5 anos de desenvolvimento full stack em C++ e Qt. No Nodes, participei do ciclo completo de produto: entender o que precisava ser construído, implementar, integrar recursos de IA e entregar algo que o cliente usa e paga.",
-      "Na parte de IA, trabalhei com MCP (Model Context Protocol) e skills, para que modelos de linguagem pudessem acessar as funcionalidades do software de forma estruturada."
+      "De 2022 a 2026, como Software Engineer, desenvolvi em C++ e Qt para softwares de engenharia estrutural usados por milhares de profissionais. No Axis Nodes, construí funcionalidades centrais, fluxos baseados em nós, tratamento de dados e interfaces interativas em Qt.",
+      "Na parte de IA, colaborei no desenvolvimento de servidores MCP (Model Context Protocol) e Skills de IA para o AltoQi Eberick, disponibilizando capacidades do software e informações dos projetos a assistentes de IA por meio de ferramentas integradas e fluxos em linguagem natural."
     ],
     "highlights": [
-      "Desenvolvimento full stack em C++ e Qt por quase 5 anos",
-      "Implementação de IA com MCP e skills",
-      "Responsabilidade de ponta a ponta: do projeto ao cliente e ao faturamento"
+      "Construção de um produto novo, do início do desenvolvimento até a entrega aos clientes",
+      "Funcionalidades centrais, fluxos baseados em nós e interfaces interativas em Qt",
+      "Servidores MCP e Skills de IA para o AltoQi Eberick",
+      "Regras de negócio, algoritmos e estruturas de dados para modelagem estrutural"
     ],
     "stack": [
       "C++",
       "Qt",
-      "IA",
       "MCP",
-      "Skills"
+      "Skills de IA",
+      "Claude",
+      "GitHub Copilot"
     ],
     "languages": [
       "C++"
@@ -37,7 +39,7 @@
     "images": [
       {
         "src": "assets/img/projects/altoqi-nodes-editor.png",
-        "caption": "Editor do AltoQi Nodes: nós de Número e Ponto alimentam um Retângulo no nível DT-Forma para desenhar a forma de uma viga"
+        "caption": "Editor do AltoQi Axis Nodes: nós de Número e Ponto alimentam um Retângulo no nível DT-Forma para desenhar a forma de uma viga"
       }
     ],
     "diagram": {
@@ -70,7 +72,8 @@
         "",
         ""
       ]
-    }
+    },
+    "short": "Axis Nodes"
   },
   {
     "slug": "scoliwatch",

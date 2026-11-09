@@ -1,14 +1,14 @@
 {
   "name": "Pamela Fialho",
-  "role": "Desenvolvedora de software",
+  "role": "Engenheira de software",
   "headline": "Do firmware ao app: construo sistemas completos, unindo eletrônica, física e software.",
   "about": [
-    "Sou formada em Eletrônica, estudo Física e trabalho como desenvolvedora de software. Foram quase 5 anos de desenvolvimento full stack em C++ e Qt na AltoQi, levando produto do projeto até o cliente. Essa mistura define meu trabalho: consigo projetar o hardware, escrever o firmware que roda nele, construir o software que conversa com ele e analisar os dados que saem do outro lado.",
+    "Sou formada em Eletrônica, estudo Física e trabalho como engenheira de software. De 2022 a 2026, fui Software Engineer na AltoQi, desenvolvendo em C++ e Qt e levando produto do início do desenvolvimento até o cliente. Essa mistura define meu trabalho: consigo projetar o hardware, escrever o firmware que roda nele, construir o software que conversa com ele e analisar os dados que saem do outro lado.",
     "Gosto de problemas reais e com gente do outro lado, como um colete de escoliose que precisa ser apertado do jeito certo ou um experimento de óptica que precisa ficar travado no pico. Trabalho com especificação antes do código, testes automatizados e documentação que outra pessoa consegue seguir."
   ],
   "location": "Florianópolis, SC, Brasil",
   "github": "https://github.com/PFSLDO",
-  "linkedin": "",
+  "linkedin": "https://www.linkedin.com/in/pamela-fialho/",
   "email": "pamelafialho2002@hotmail.com",
   "codingSince": 2019,
   "stack": [
@@ -160,7 +160,7 @@
         "leaves": [
           {
             "title": "Indústria: AltoQi",
-            "text": "Quase 5 anos como desenvolvedora full stack C++/Qt, com IA (MCP e skills) e entrega até o cliente.",
+            "text": "Software Engineer de 2022 a 2026: C++ e Qt no AltoQi Eberick e no Axis Nodes, com IA (MCP e skills).",
             "projects": [
               "altoqi-nodes"
             ]
@@ -230,7 +230,7 @@
     "text": "Stacks mudam e destinos novos aparecem. Quando um projeto pede uma tecnologia que eu ainda não uso, eu leio o mapa, escolho a rota e aprendo no caminho. Alguns destinos que explorei assim:",
     "destinations": [
       {
-        "stack": "MCP e skills de IA",
+        "stack": "MCP e Skills de IA",
         "project": "altoqi-nodes",
         "bearing": 75
       },
@@ -265,15 +265,14 @@
     {
       "company": "AltoQi",
       "about": "Software de engenharia e BIM · Florianópolis",
-      "role": "Desenvolvedora de software full stack C++/Qt",
-      "period": "quase 5 anos",
-      "text": "Desenvolvimento de software em C++ e Qt, ponta a ponta: do projeto até a mão do cliente e o faturamento para a empresa. Trabalhei diretamente no AltoQi Nodes, um ambiente de programação visual por nós, e na implementação de recursos de IA com MCP e skills.",
+      "role": "Software Engineer",
+      "period": "2022 – out. 2026",
+      "text": "Desenvolvimento em C++ e Qt de softwares de engenharia estrutural, como o AltoQi Eberick, usados por milhares de profissionais. Participei da construção do AltoQi Axis Nodes, uma ferramenta de programação visual por nós integrada ao Eberick, do início do desenvolvimento até a entrega aos clientes, e do desenvolvimento de servidores MCP e Skills de IA para o Eberick.",
       "stack": [
         "C++",
         "Qt",
-        "IA",
         "MCP",
-        "Skills"
+        "Skills de IA"
       ],
       "project": "altoqi-nodes"
     }
