@@ -2,7 +2,7 @@
   {
     "slug": "altoqi-nodes",
     "title": "AltoQi Nodes",
-    "tagline": "Produto da AltoQi desenvolvido em C++ e Qt, com recursos de IA",
+    "tagline": "Programação visual por nós para gerar desenho e geometria, feita em C++ e Qt, com recursos de IA",
     "year": "~5 anos",
     "category": [
       "desktop"
@@ -11,7 +11,7 @@
     "featured": true,
     "role": "Desenvolvedora de software full stack C++/Qt",
     "company": "AltoQi",
-    "summary": "Na AltoQi, empresa de software de engenharia e BIM de Florianópolis, trabalhei diretamente no AltoQi Nodes, do projeto até chegar na mão do cliente e gerar faturamento para a empresa, incluindo a implementação de recursos de inteligência artificial com MCP e skills.",
+    "summary": "Na AltoQi, empresa de software de engenharia e BIM de Florianópolis, trabalhei diretamente no AltoQi Nodes, um ambiente de programação visual: em vez de escrever código, o usuário conecta nós (números, pontos, retângulos, níveis de desenho) para gerar desenho e geometria, como a forma de uma viga. Participei do projeto até o produto chegar na mão do cliente e gerar faturamento para a empresa, incluindo a implementação de recursos de inteligência artificial com MCP e skills.",
     "details": [
       "Foram quase 5 anos de desenvolvimento full stack em C++ e Qt. No Nodes, participei do ciclo completo de produto: entender o que precisava ser construído, implementar, integrar recursos de IA e entregar algo que o cliente usa e paga.",
       "Na parte de IA, trabalhei com MCP (Model Context Protocol) e skills, para que modelos de linguagem pudessem acessar as funcionalidades do software de forma estruturada."
@@ -34,7 +34,12 @@
     "links": {},
     "private": true,
     "proprietary": true,
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/projects/altoqi-nodes-editor.png",
+        "caption": "Editor do AltoQi Nodes: nós de Número e Ponto alimentam um Retângulo no nível DT-Forma para desenhar a forma de uma viga"
+      }
+    ],
     "diagram": {
       "title": "Do projeto ao cliente",
       "steps": [
