@@ -118,7 +118,13 @@
     ],
     "links": {},
     "private": true,
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/projects/floripa-hoje-tela.png",
+        "caption": "Tela do Floripa Hoje: recomendação do dia, nível de energia, seletor de dias e condições do tempo",
+        "pos": "top"
+      }
+    ],
     "diagram": {
       "title": "Como o ranking é montado",
       "steps": [

@@ -273,7 +273,7 @@ const chips = (arr, n = arr.length) =>
 const visualHTML = (p) => {
   // foto própria (não ilustrativa, não logo) entra acima do diagrama nos destaques
   const photo = (p.images || []).find((i) => !i.illustrative && !i.contain);
-  const photoHTML = photo ? `<img class="feature-photo" src="${photo.src}" alt="${esc(photo.caption)}" loading="lazy">` : "";
+  const photoHTML = photo ? `<img class="feature-photo" src="${photo.src}" alt="${esc(photo.caption)}" loading="lazy"${photo.pos ? ` style="object-position:${photo.pos}"` : ""}>` : "";
   if (p.diagram) return `${photoHTML}<p class="diagram-title">${esc(p.diagram.title)}</p>${flowHTML(p.diagram, true)}`;
   if (p.images?.[0]) return `<img src="${p.images[0].src}" alt="${esc(p.images[0].caption)}" loading="lazy">`;
   return "";
@@ -299,7 +299,7 @@ $("#featured").innerHTML = projects
 
 const thumb = (p) => {
   const img = p.images?.[0];
-  if (img) return `<img src="${img.src}" alt="" loading="lazy" class="${img.contain ? "contain" : ""}">${img.illustrative ? '<span class="thumb-tag">ilustrativa</span>' : ""}`;
+  if (img) return `<img src="${img.src}" alt="" loading="lazy" class="${img.contain ? "contain" : ""}"${img.pos ? ` style="object-position:${img.pos}"` : ""}>${img.illustrative ? '<span class="thumb-tag">ilustrativa</span>' : ""}`;
   if (p.diagram) {
     // miniatura: no máximo 3 etapas (primeira, a do meio e a última)
     const st = p.diagram.steps;
