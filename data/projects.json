@@ -156,8 +156,8 @@
     }
   },
   {
-    "slug": "floripa-hoje",
-    "title": "Floripa Hoje",
+    "slug": "hoje-em-floripa",
+    "title": "Hoje em Floripa",
     "tagline": "O que fazer hoje na Grande Florianópolis, de acordo com o clima e o mar",
     "year": "2026",
     "category": [
@@ -171,6 +171,7 @@
       "O projeto foi feito com desenvolvimento orientado a especificação (Spec Kit): cada decisão de produto está registrada na spec antes do código. A arquitetura separa adapters (APIs externas), domínio puro (ranking, setores, tempo) e UI, o que deixa a regra de negócio 100% testável."
     ],
     "highlights": [
+      "Ilustração e sugestões mudam com o tempo do dia e com a energia escolhida",
       "Arquitetura em camadas: adapters → domínio puro → componentes",
       "Validação de dados com Zod e checagem do catálogo no build",
       "Testes unitários (Vitest), E2E (Playwright) e orçamento de performance (Lighthouse CI)",
@@ -192,12 +193,19 @@
     "languages": [
       "TypeScript"
     ],
-    "links": {},
+    "links": {
+      "live": "https://www.hojeemfloripa.com.br/?energia=baixa"
+    },
     "private": true,
     "images": [
       {
-        "src": "assets/img/projects/floripa-hoje-tela.png",
-        "caption": "Tela do Floripa Hoje: recomendação do dia, nível de energia, seletor de dias e condições do tempo",
+        "src": "assets/img/projects/hojeemfloripa-sol.png",
+        "caption": "Dia de sol: a melhor pedida é a Ponte Hercílio Luz no fim da tarde, com outras ideias abaixo",
+        "pos": "top"
+      },
+      {
+        "src": "assets/img/projects/hojeemfloripa-chuva.png",
+        "caption": "Dia de chuva com energia baixa: a ilustração muda com o tempo e as sugestões viram programas cobertos e leves",
         "pos": "top"
       }
     ],
@@ -443,8 +451,11 @@
       "TypeScript",
       "CSS"
     ],
-    "links": {},
-    "private": true,
+    "links": {
+      "live": "https://pfsldo.github.io/prato-amigo/",
+      "repo": "https://github.com/PFSLDO/prato-amigo"
+    },
+    "private": false,
     "images": [
       {
         "src": "assets/img/projects/pratoamigo-tela.png",
