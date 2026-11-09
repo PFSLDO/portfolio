@@ -412,9 +412,9 @@
     "short": "Travamento óptico"
   },
   {
-    "slug": "meu-menu",
-    "title": "Meu Menu",
-    "tagline": "O que dá para comer hoje, respeitando suas comidas seguras e restrições",
+    "slug": "prato-amigo",
+    "title": "Prato Amigo",
+    "tagline": "Comer sem surpresas, no seu ritmo: sugestões a partir das suas comidas seguras e restrições",
     "year": "2026",
     "category": [
       "web"
@@ -423,7 +423,7 @@
     "featured": false,
     "summary": "Site para pessoas com restrição alimentar, muitas vezes neurodivergentes, que precisam saber o que podem comer. A pessoa cadastra as comidas seguras, as restrições e o que não tolera, informa os ingredientes que tem em casa e recebe sugestões de refeições que respeitam tudo isso.",
     "details": [
-      "Para muita gente neurodivergente, ou com seletividade alimentar, decidir o que comer cansa: textura, cheiro e apresentação importam, e uma sugestão genérica de receita não ajuda. O Meu Menu parte das comidas seguras de cada pessoa, ou seja, aquilo que ela sabe que consegue comer, e das suas restrições, para sugerir só o que faz sentido para ela.",
+      "Para muita gente neurodivergente, ou com seletividade alimentar, decidir o que comer cansa: textura, cheiro e apresentação importam, e uma sugestão genérica de receita não ajuda. O Prato Amigo parte das comidas seguras de cada pessoa, ou seja, aquilo que ela sabe que consegue comer, e das suas restrições, para sugerir só o que faz sentido para ela.",
       "O motor de sugestão remove tudo que tenha ingrediente restrito ou rejeitado, prioriza as comidas seguras e o que já está na despensa, e organiza as opções por refeição. Autenticação e dados ficam no Supabase, e a interface é pensada para ser calma e previsível."
     ],
     "highlights": [
@@ -447,8 +447,13 @@
     "private": true,
     "images": [
       {
-        "src": "assets/img/projects/meumenu-logo.png",
-        "caption": "Logo do Meu Menu",
+        "src": "assets/img/projects/pratoamigo-tela.png",
+        "caption": "Primeiro passo: a pessoa marca as comidas que já come, as que gosta e as que não rolam",
+        "pos": "left top"
+      },
+      {
+        "src": "assets/img/projects/pratoamigo-logo.png",
+        "caption": "Logo do Prato Amigo",
         "contain": true
       }
     ],
