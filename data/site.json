@@ -136,7 +136,6 @@
           {
             "title": "Pesquisa em física nuclear",
             "text": "Fase pasta em estrelas de nêutrons, com simulação numérica em Fortran.",
-            "now": true,
             "projects": [
               "pasta-nuclear"
             ]
@@ -200,7 +199,6 @@
         "leaf": {
           "title": "Instrumentação científica",
           "text": "Controle por microcontrolador para manter experimentos de óptica travados no pico: eletrônica e física no mesmo projeto.",
-          "now": true,
           "projects": [
             "optics-locking"
           ]

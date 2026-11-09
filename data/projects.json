@@ -260,7 +260,7 @@
       "embedded",
       "science"
     ],
-    "status": "Pesquisa em andamento",
+    "status": "Encerrado",
     "featured": true,
     "summary": "Sistema de varredura e travamento (lock) para experimentos de óptica usando ESP32 e STM32. Uma estratégia híbrida usa o DAC interno de 8 bits para a varredura rápida e um DAC externo de 12 bits (MCP4725, I²C) para o ajuste fino no travamento.",
     "details": [
@@ -573,10 +573,10 @@
     "category": [
       "science"
     ],
-    "status": "Pesquisa em andamento",
+    "status": "Encerrado",
     "featured": false,
     "role": "Refatoração e extensão do código de pesquisa",
-    "summary": "Simulação da \"fase pasta\" na crosta de estrelas de nêutrons, região em que a matéria nuclear forma estruturas em 1D, 2D e 3D (placas, bastões e gotas). Refatorei o código de pesquisa para Fortran moderno e estou adicionando o efeito do campo magnético.",
+    "summary": "Simulação da \"fase pasta\" na crosta de estrelas de nêutrons, região em que a matéria nuclear forma estruturas em 1D, 2D e 3D (placas, bastões e gotas). Refatorei o código de pesquisa para Fortran moderno e trabalhei na inclusão do efeito do campo magnético.",
     "details": [
       "O código usa a aproximação de Thomas-Fermi com modelos relativísticos de campo médio (Walecka não linear e acoplamentos dependentes da densidade, como NL3, DDH-δ e Typel-Wolter), expande os campos mesônicos numa base de oscilador e integra por quadratura de Gauss.",
       "O código original é do Prof. Sidney Avancini (UFSC). Meu trabalho foi migrá-lo para Fortran 90, organizar variáveis, globais e lógica, e estendê-lo para incluir o campo magnético intenso dessas estrelas."
