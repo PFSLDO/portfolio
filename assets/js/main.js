@@ -59,7 +59,7 @@ $("#theme-toggle").addEventListener("click", () => {
 $("#year").textContent = new Date().getFullYear();
 
 /* ---------- Hero, sobre, stack ---------- */
-$("#hero-location").textContent = site.location.replace(", Brasil", "");
+$("#hero-location").textContent = site.location;
 $("#hero-name").textContent = site.name;
 $("#hero-role").textContent = site.role;
 $("#hero-headline").textContent = site.headline;
