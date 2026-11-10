@@ -739,14 +739,14 @@
     "category": [
       "web"
     ],
-    "status": "No ar",
+    "status": "Encerrado",
     "featured": false,
-    "summary": "Site responsivo para a marca Pamela Fialho Art, com galeria de trabalhos, apresentação e contato. Feito do zero com HTML, CSS e JavaScript, publicado com domínio próprio no GitHub Pages.",
+    "summary": "Site responsivo para a marca Pamela Fialho Art, com galeria de trabalhos, apresentação e contato. Feito do zero com HTML, CSS e JavaScript, que ficou publicado com domínio próprio no GitHub Pages e hoje está fora do ar.",
     "details": [
       "Layout responsivo com media queries próprias, favicons para todas as plataformas e otimização de imagens para a galeria."
     ],
     "highlights": [
-      "Domínio próprio no GitHub Pages",
+      "Publicado com domínio próprio no GitHub Pages",
       "Responsivo sem frameworks"
     ],
     "stack": [
@@ -761,8 +761,7 @@
       "JavaScript"
     ],
     "links": {
-      "repo": "https://github.com/PFSLDO/Pamela_Fialho_Art_site",
-      "live": "https://art.pamelafialho.com.br/"
+      "repo": "https://github.com/PFSLDO/Pamela_Fialho_Art_site"
     },
     "images": [
       {
