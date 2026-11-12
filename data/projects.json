@@ -429,14 +429,16 @@
     ],
     "status": "Em desenvolvimento",
     "featured": false,
-    "summary": "Site para pessoas com restrição alimentar, muitas vezes neurodivergentes, que precisam saber o que podem comer. A pessoa cadastra as comidas seguras, as restrições e o que não tolera, informa os ingredientes que tem em casa e recebe sugestões de refeições que respeitam tudo isso.",
+    "summary": "Site para pessoas com restrição alimentar, muitas vezes neurodivergentes, que precisam saber o que podem comer. A pessoa conta seu jeito de comer (comidas seguras, texturas, restrições e o que não come de jeito nenhum) e recebe sugestões do que cozinhar com o que tem em casa e do que pedir quando come fora.",
     "details": [
-      "Para muita gente neurodivergente, ou com seletividade alimentar, decidir o que comer cansa: textura, cheiro e apresentação importam, e uma sugestão genérica de receita não ajuda. O Prato Amigo parte das comidas seguras de cada pessoa, ou seja, aquilo que ela sabe que consegue comer, e das suas restrições, para sugerir só o que faz sentido para ela.",
-      "O motor de sugestão remove tudo que tenha ingrediente restrito ou rejeitado, prioriza as comidas seguras e o que já está na despensa, e organiza as opções por refeição. Autenticação e dados ficam no Supabase, e a interface é pensada para ser calma e previsível."
+      "Para muita gente neurodivergente, ou com seletividade alimentar, decidir o que comer cansa: textura, cheiro e apresentação importam, e uma sugestão genérica de receita não ajuda. O Prato Amigo parte das comidas seguras de cada pessoa, ou seja, aquilo que ela sabe que consegue comer, e das texturas que ela gosta ou evita, para sugerir só o que faz sentido para ela.",
+      "O motor de sugestão remove tudo que tenha ingrediente restrito ou rejeitado, prioriza as comidas seguras e o que já está na despensa, e organiza as opções por refeição. No modo Comer fora, a pessoa tira uma foto do cardápio do restaurante: o texto é lido no próprio aparelho e, se ela quiser, pode usar IA (Gemini) só para listar os pratos de fotos difíceis. Quem escolhe o melhor prato continua sendo o Prato Amigo.",
+      "A interface é calma e previsível, com linguagem acolhedora e escolhas por toque, sem formulários cansativos. Autenticação e dados ficam no Supabase."
     ],
     "highlights": [
-      "Perfil com comidas seguras, restrições e alimentos rejeitados",
+      "Perfil com comidas seguras, texturas, restrições e alimentos rejeitados",
       "Sugestões a partir dos ingredientes que a pessoa tem em casa",
+      "Comer fora: leitura do cardápio por foto, no aparelho ou com IA (Gemini) quando a pessoa escolhe",
       "Interface calma e previsível, pensada para neurodivergentes",
       "Autenticação e banco com Supabase"
     ],
@@ -445,6 +447,7 @@
       "Vite",
       "TypeScript",
       "Supabase",
+      "Gemini API",
       "ESLint"
     ],
     "languages": [
@@ -452,19 +455,26 @@
       "CSS"
     ],
     "links": {
-      "live": "https://pfsldo.github.io/prato-amigo/",
-      "repo": "https://github.com/PFSLDO/prato-amigo"
+      "live": "https://pratoamigo.com.br/"
     },
-    "private": false,
+    "private": true,
     "images": [
       {
-        "src": "assets/img/projects/pratoamigo-tela.png",
-        "caption": "Primeiro passo: a pessoa marca as comidas que já come, as que gosta e as que não rolam",
+        "src": "assets/img/projects/pratoamigo-meu-jeito.png",
+        "caption": "Meu jeito: a pessoa conta o que já come, o que gosta e o que não rola",
         "pos": "left top"
       },
       {
-        "src": "assets/img/projects/pratoamigo-logo.png",
-        "caption": "Logo do Prato Amigo",
+        "src": "assets/img/projects/pratoamigo-texturas.png",
+        "caption": "Texturas: um toque para gosto, dois para não como, três para tanto faz"
+      },
+      {
+        "src": "assets/img/projects/pratoamigo-cardapio.png",
+        "caption": "Comer fora: a foto do cardápio é lida no aparelho, com opção de usar IA para fotos difíceis"
+      },
+      {
+        "src": "assets/img/projects/pratoamigo-icone.png",
+        "caption": "Ícone do Prato Amigo",
         "contain": true
       }
     ],
